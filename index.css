@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 :root {
     /* colors */
     --blue: #1877f2;
@@ -11,6 +13,14 @@
     --main-height: 80vh;
     --log-width: 25%;
     --input-height: clamp(50px, 5vmin, 100px);
+    --huge-font: clamp(25px, 7vmin, 70px);
+    --medium-font: clamp(24px, 2vmin, 30px);
+    --normal-font: clamp(20px, 1.75vmin, 26px);
+    --small-font: clamp(14px, 1.25vmin, 18px);
+}
+
+* {
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -59,10 +69,17 @@ main {
     text-align: center;
 }
 
-
-
+header > * {
+    margin: 0%;
+}
 header > h1 {
     color: var(--blue);
+    font-size: var(--huge-font);
+    font-weight: 900;
+}
+
+header > p {
+    font-size: var(--medium-font);
 }
 
 footer {
@@ -81,7 +98,6 @@ footer {
     width: 100%;
     align-self: center;
 }
-
 #lang {
     display: flex;
     gap: 1.5vmin;
@@ -91,8 +107,11 @@ footer {
     flex-wrap: wrap;
     column-gap: 3vmin;
     row-gap: 1vmin;
+    font-size: var(--small-font);
 }
-
+#cc {
+    font-weight: 300;
+}
 @media (max-aspect-ratio: 1/1) {
     :root {
         --direction: column;
@@ -115,10 +134,11 @@ footer {
 
 /* button */
 .basic_button {
+    font-size: var(--normal-font);
     height: var(--input-height);
     border: none;
     border-radius: 1vmin; 
-    font-weight: bold;
+    font-weight: 600;
     color: white;
     background-color: var(--color);
     width: var(--width);
@@ -132,6 +152,7 @@ footer {
 
 /* input */
 .basic_input {
+    font-size: var(--normal-font);
     border: 1px solid var(--gray);
     border-radius: 1vmin;
     height: var(--input-height);

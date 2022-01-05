@@ -1,0 +1,54 @@
+:root {
+    --blue: #1877f2;
+    --direction: row;
+    --header-align: left;
+    --main-height: 80vh;
+    --log-width: 25%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: var(--main-height) calc(110vh - var(--main-height));
+    margin: 0%;
+}
+
+main {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    flex-direction: var(--direction);
+}
+
+#log {
+    width: var(--log-width);
+    max-width: 600px;
+}
+#log > form {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 3%;
+}
+#log > p {
+    text-align: center;
+}
+
+header > h1 {
+    color: var(--blue);
+}
+
+footer > * {
+    text-align: center;
+    width: 80%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    :root {
+        --direction: column;
+        --main-height: 90vh;
+        --log-width: 50%;
+    }
+}
